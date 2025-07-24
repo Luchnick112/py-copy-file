@@ -10,5 +10,5 @@ def copy_file(command: str) -> None:
         return
     if not os.path.isfile(source):
         return
-    with open(source, "r") as file_in, open(target, "w") as file_out:
+    with open(source, "rb") as file_in, open(target, "wb") as file_out:
         file_out.write(file_in.read())
